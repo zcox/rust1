@@ -1,0 +1,17 @@
+[package]
+name = "rust1"
+version = "0.1.0"
+edition = "2021"
+authors = ["Your Name <you@example.com>"]
+description = "A simple temperature converter to learn Rust fundamentals"
+
+# Tells Cargo to run build.rs before compiling
+build = "build.rs"
+
+[dependencies]
+# Command-line argument parsing library
+clap = { version = "4.5", features = ["derive"] }
+
+[build-dependencies]
+# Date/time library for build script
+chrono = "0.4"

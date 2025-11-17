@@ -1,0 +1,183 @@
+
+╭─── Claude Code v2.0.42 ──────────────────────────────────────────────────────╮
+│                                    │ Tips for getting started                │
+│            Welcome back!           │ Run /init to create a CLAUDE.md file w… │
+│                                    │ ─────────────────────────────────────── │
+│               ▐▛███▜▌              │ Recent activity                         │
+│              ▝▜█████▛▘             │ No recent activity                      │
+│                ▘▘ ▝▝               │                                         │
+│                                    │                                         │
+│   Sonnet 4.5 · API Usage Billing   │                                         │
+│    /Users/ZCox/code/zcox/rust1     │                                         │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+> i am learning rust. i need a basic project that shows rust fundamentals 
+and best practices, like a build script, a library dependency, a simple 
+function with a unit test, and a main application that calls the simple 
+function. i don't know any of this stuff. create a plan for this simple repo
+ to teach me the basics. don't write code, just a single markdown file with 
+the plan. 
+
+⏺ I'll create a plan for a basic Rust project that will teach you the
+  fundamentals. Let me write a markdown file with a comprehensive learning
+  plan.
+
+⏺ Write(LEARNING_PLAN.md)
+  ⎿  Wrote 165 lines to LEARNING_PLAN.md                                   
+     # Rust Learning Project Plan
+     ## Project Overview
+     A simple temperature converter application that demonstrates Rust
+     fundamentals and best practices.
+     ## What You'll Learn
+     ### 1. Project Structure
+     - Standard Rust project layout with `src/` directory
+     - `Cargo.toml` - Rust's package manifest (like `package.json` in
+     Node.js)
+     … +155 lines (ctrl+o to expand)
+
+⏺ I've created a comprehensive learning plan in LEARNING_PLAN.md that
+  outlines a temperature converter project. This project will teach you:
+
+  - Project structure with Cargo.toml, library code, and main application
+  - Core Rust concepts like functions, types, ownership, and error handling
+
+  - Unit testing with the built-in test framework
+  - Build scripts that run before compilation
+  - External dependencies using the clap crate for CLI parsing
+  - Essential cargo commands you'll use daily
+
+  The plan walks through each component, explains what you'll learn, and
+  provides a suggested learning path. It's a practical, real-world example
+  that demonstrates Rust best practices while staying simple enough to
+  understand quickly.
+
+  When you're ready, I can implement this project for you step-by-step!
+
+> let's add to the plan: i'm going to use claude code heavily while working 
+on this project. so claude code needs to be able to compile the code and get
+ compiler output to fix problems, needs to run unit tests and get test 
+output to fix things, etc. 
+
+⏺ Read(LEARNING_PLAN.md)
+  ⎿  Read 165 lines
+
+⏺ Update(LEARNING_PLAN.md)
+  ⎿  Updated LEARNING_PLAN.md with 67 additions                          
+       156    - Testing is integrated from the start
+       157    - It's practical - you can actually use it!
+       158    
+       159 +  ## Working with Claude Code
+       160 +  
+       161 +  Since you'll be using Claude Code to build this project, 
+           + here's how Claude Code will help you:
+       162 +  
+       163 +  ### Iterative Development Workflow
+       164 +  
+       165 +  1. **Write Code**
+       166 +     - Claude Code will create the initial files based on 
+           + Rust best practices
+       167 +     - Code will be written incrementally, one component at a
+           +  time
+       168 +  
+       169 +  2. **Compile and Get Feedback**
+       170 +     - After writing code, Claude Code will run `cargo build`
+           +  or `cargo check`
+       171 +     - Rust compiler errors will be captured and analyzed
+       172 +     - Claude Code will explain what the errors mean in 
+           + beginner-friendly terms
+       173 +     - Code will be fixed based on compiler feedback
+       174 +  
+       175 +  3. **Run Tests**
+       176 +     - After library code is written, Claude Code will run 
+           + `cargo test`
+       177 +     - Test output will be analyzed (passes, failures, 
+           + panics)
+       178 +     - If tests fail, Claude Code will debug and fix the 
+           + issues
+       179 +     - You'll see the test-driven development cycle in action
+       180 +  
+       181 +  4. **Run the Application**
+       182 +     - Once tests pass, Claude Code will run `cargo run` with
+           +  various arguments
+       183 +     - Runtime errors will be caught and fixed
+       184 +     - You'll see the complete working application
+       185 +  
+       186 +  5. **Code Quality Tools**
+       187 +     - Claude Code will run `cargo clippy` to catch common 
+           + mistakes
+       188 +     - Will run `cargo fmt` to format code to Rust standards
+       189 +     - You'll learn Rust idioms through these suggestions
+       190 +  
+       191 +  ### What Makes This Ideal for Learning with Claude Code
+       192 +  
+       193 +  - **Fast Feedback Loop**: You'll see compile → error → fix 
+           + → success cycles
+       194 +  - **Learn from Mistakes**: Rust's compiler errors are 
+           + educational, and Claude Code will explain them
+       195 +  - **Best Practices**: Claude Code will demonstrate 
+           + idiomatic Rust from the start
+       196 +  - **Incremental Building**: Each component is built and 
+           + tested before moving to the next
+       197 +  - **Real Development**: You'll experience the actual Rust 
+           + development workflow
+       198 +  
+       199 +  ### Example Workflow You'll See
+       200 +  
+       201 +  ```
+       202 +  1. Claude Code writes src/lib.rs with conversion functions
+       203 +  2. Runs: cargo build
+       204 +  3. Compiler error: "missing lifetime specifier" (example)
+       205 +  4. Claude Code explains the error and fixes it
+       206 +  5. Runs: cargo build again - SUCCESS!
+       207 +  6. Runs: cargo test
+       208 +  7. Test output shows which tests pass/fail
+       209 +  8. If failures, Claude Code debugs and fixes
+       210 +  9. Runs: cargo test again - ALL PASS!
+       211 +  10. Moves to next component (main.rs)
+       212 +  ```
+       213 +  
+       214 +  ### Commands Claude Code Will Use
+       215 +  
+       216 +  - `cargo check` - Fast compilation check without building 
+           + binary
+       217 +  - `cargo build` - Full compilation to catch all errors
+       218 +  - `cargo test` - Run unit tests and show results
+       219 +  - `cargo test --verbose` - Detailed test output
+       220 +  - `cargo run -- <args>` - Run the application with 
+           + arguments
+       221 +  - `cargo clippy` - Linting for common issues
+       222 +  - `cargo fmt` - Format code to standard style
+       223 +  
+       224 +  This iterative approach means you'll learn by seeing real 
+           + errors and their fixes, not just working code.
+       225 +  
+       226    ## Resources
+       227    
+       228    - Official Rust Book: https://doc.rust-lang.org/book/
+
+⏺ Perfect! I've updated the learning plan with a new section called "Working
+   with Claude Code" that explains:
+
+  The iterative development workflow you'll experience:
+  - Write code → Compile → Fix errors → Test → Fix failures → Run
+  application
+
+  What makes this ideal for learning with Claude Code:
+  - Fast feedback loops with compiler errors
+  - Explanations of Rust's notoriously helpful (but complex) error messages
+  - See the test-driven development process in action
+  - Learn from actual mistakes and fixes, not just perfect code
+
+  Example workflow showing the compile-fix-test cycle you'll see repeatedly
+
+  Specific cargo commands Claude Code will use to build, test, lint, and
+  format your code
+
+  This approach means you'll learn Rust the way professional Rust developers
+   actually work - by iterating based on compiler feedback, running tests
+  frequently, and using Rust's excellent tooling ecosystem. The Rust
+  compiler is famously helpful with its error messages, and Claude Code will
+   help translate those into beginner-friendly explanations.
+
+
+
